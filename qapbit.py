@@ -67,8 +67,8 @@ class BitrateRechnerGUI:
         preset_size_frame = tk.Frame(frame_size)
         preset_size_frame.pack(pady=2)
 
-        size_presets = [700, 1400, 2100, 4470, 8150]
-        size_labels = ["CD", "2xCD", "3xCD", "DVD", "DVD-DL"]
+        size_presets = [700, 1000, 1400, 4470, 8150]
+        size_labels = ["CD", "MicroHD", "2xCD", "DVD", "DVD-DL"]
         
         for i, (val, lbl) in enumerate(zip(size_presets, size_labels)):
             btn = tk.Button(preset_size_frame, text=f"{lbl}\n({val})", width=8,
