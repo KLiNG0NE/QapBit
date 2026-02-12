@@ -10,6 +10,6 @@ Dieses einfache Programm berechnet die Videobitrate.
 
 ## Screenshot ##
 
-![](film-frames.png)
+![](Screenshot.png)
 
 > QapBit – „Qap“ bedeutet „funktionieren“ → „funktionierende Bitrate“
