@@ -4,7 +4,7 @@ from tkinter import messagebox
 class BitrateRechnerGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("QapBit – Videobitraterechner")
+        self.root.title("QapBit – Videobitratenrechner")
         self.root.geometry("500x500") # Höhe leicht erhöht für das neue Feld
         self.root.resizable(False, False)
 
