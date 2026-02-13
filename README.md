@@ -19,3 +19,19 @@ Ein kleines Tool zur Berechnung der Videobitrate.
 ## Screenshot ##
 
 ![](Screenshot.png)
+
+## Lizenzen ##
+
+Folgende Lizezen sind zu beachten:
+
+### Eigener Code ###
+
+GNU GENERAL PUBLIC LICENSE Version 3
+
+### Externe Quellen ###
+
+Folgende externe Quellen wurden genutzt:
+
+#### Grafiken ####
+
+- https://openmoji.org/
