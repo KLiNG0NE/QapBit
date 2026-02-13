@@ -8,7 +8,11 @@ Videobitratenrechner
 
 ## Funktion ##
 
-Dieses einfache Programm berechnet die Videobitrate.
+Ein kleines Tool zur Berechnung der Videobitrate.
+
+- Berechnung basierend auf Zielgröße (MiB) und Dauer.
+- Berücksichtigung von Audio-Bitrate und Container-Overhead.
+- Verschiedene Presets für gängige Medien.
 
 ## Screenshot ##
 
