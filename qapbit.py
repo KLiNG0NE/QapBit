@@ -5,8 +5,22 @@ class BitrateRechnerGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("QapBit – Videobitratenrechner")
-        self.root.geometry("500x500") # Höhe leicht erhöht für das neue Feld
+        self.root.geometry("500x520") # Höhe minimal angepasst falls Text sich verschiebt
         self.root.resizable(False, False)
+
+        # --- NEU: Menüleiste erstellen ---
+        menubar = tk.Menu(self.root)
+        self.root.config(menu=menubar)
+
+        # 1. Menüpunkt: Datei
+        datei_menu = tk.Menu(menubar, tearoff=0)
+        datei_menu.add_command(label="Schließen", command=self.root.quit)
+        menubar.add_cascade(label="Datei", menu=datei_menu)
+
+        # 2. Menüpunkt: ? (Hilfe)
+        hilfe_menu = tk.Menu(menubar, tearoff=0)
+        hilfe_menu.add_command(label="Info", command=self.zeige_info)
+        menubar.add_cascade(label="?", menu=hilfe_menu)
 
         # --- Styles ---
         pad_opts = {'padx': 10, 'pady': 5}
@@ -67,15 +81,15 @@ class BitrateRechnerGUI:
         preset_size_frame = tk.Frame(frame_size)
         preset_size_frame.pack(pady=2)
 
-        size_presets = [700, 1000, 1400, 4470, 8150]
-        size_labels = ["CD", "MicroHD", "2xCD", "DVD", "DVD-DL"]
+        size_presets = [700, 1400, 2100, 4470, 8150]
+        size_labels = ["CD", "2xCD", "3xCD", "DVD", "DVD-DL"]
         
         for i, (val, lbl) in enumerate(zip(size_presets, size_labels)):
             btn = tk.Button(preset_size_frame, text=f"{lbl}\n({val})", width=8,
                             command=lambda v=val: self.set_size(v))
             btn.grid(row=0, column=i, padx=2)
 
-        # --- 3.5 NEU: Overhead ---
+        # --- 3.5 Bereich: Overhead ---
         frame_overhead = tk.LabelFrame(root, text=" Overhead (Container etc.) ", font=lbl_font)
         frame_overhead.pack(fill="x", **pad_opts)
         
@@ -84,7 +98,7 @@ class BitrateRechnerGUI:
         tk.Label(frame_overhead_input, text="Prozent (%):").pack(side="left", padx=5)
         self.entry_overhead = tk.Entry(frame_overhead_input, width=10)
         self.entry_overhead.pack(side="left")
-        self.entry_overhead.insert(0, "3") # Voreinstellung 3%
+        self.entry_overhead.insert(0, "3")
 
         # --- 4. Berechnen Button ---
         btn_calc = tk.Button(root, text="BITRATE BERECHNEN", bg="#dddddd", font=lbl_font,
@@ -94,6 +108,19 @@ class BitrateRechnerGUI:
         # --- 5. Ergebnis Label ---
         self.lbl_result = tk.Label(root, text="Ergebnis: --- kBit/s", font=("Arial", 14, "bold"), fg="blue")
         self.lbl_result.pack(pady=10)
+
+    def zeige_info(self):
+        """Zeigt das Info-Fenster an."""
+        info_text = (
+            "QapBit v0.1\n\n"
+            "Ein kleines Tool zur Berechnung der Videobitrate.\n\n"
+            "Funktionen:\n"
+            "- Berechnung basierend auf Zielgröße (MiB) und Dauer.\n"
+            "- Berücksichtigung von Audio-Bitrate und Container-Overhead.\n"
+            "- Verschiedene Presets für gängige Medien.\n\n"
+            "Created 2026 by KLiNG0NE"
+        )
+        messagebox.showinfo("Über dieses Programm", info_text)
 
     def set_audio(self, value):
         self.entry_audio.delete(0, tk.END)
@@ -122,33 +149,31 @@ class BitrateRechnerGUI:
             if duration_sec == 0:
                 raise ValueError("Die Dauer darf nicht 0 sein.")
 
-            # --- NEUE BERECHNUNGSLOGIK MIT OVERHEAD ---
+            # Berechnung mit Overhead
             
-            # 1. Zielgröße in Bits umrechnen (Gesamtkapazität)
+            # 1. Zielgröße in Bits umrechnen
             target_bits_total = size_mib * 1024 * 1024 * 8
             
-            # 2. Overhead vom Gesamtplatz abziehen
-            # Wenn Overhead 3% ist, bleiben 97% für Audio und Video übrig.
+            # 2. Overhead abziehen (z.B. 3% -> Faktor 0.97)
             overhead_factor = 1 - (overhead_percent / 100.0)
             if overhead_factor <= 0:
                  raise ValueError("Overhead kann nicht 100% oder mehr betragen.")
 
             target_bits_usable = target_bits_total * overhead_factor
             
-            # 3. Platz den das Audio benötigt (in Bits)
+            # 3. Audio-Bits berechnen
             audio_bits = audio_kbps * 1000 * duration_sec
             
-            # 4. Verbleibender Platz für Video
+            # 4. Verbleibende Bits für Video
             video_bits = target_bits_usable - audio_bits
 
             if video_bits <= 0:
                 self.lbl_result.config(text="Fehler: Zielgröße zu klein für Audio+Overhead!", fg="red")
                 return
 
-            # 5. Videobitrate in kBit/s
+            # 5. Endergebnis in kBit/s
             video_kbps = video_bits / duration_sec / 1000
 
-            # Ergebnis anzeigen
             self.lbl_result.config(text=f"Video Bitrate: {video_kbps:.2f} kBit/s", fg="green")
 
         except ValueError as e:
