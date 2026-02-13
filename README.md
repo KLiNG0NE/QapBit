@@ -22,7 +22,7 @@ Ein kleines Tool zur Berechnung der Videobitrate.
 
 ## Lizenzen ##
 
-Folgende Lizezen sind zu beachten:
+Folgende Lizenzen sind zu beachten:
 
 ### Eigener Code ###
 
