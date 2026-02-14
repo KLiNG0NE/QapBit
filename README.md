@@ -8,6 +8,8 @@ Videobitratenrechner
 
 > QapBit – „Qap“ bedeutet „funktionieren“ → „funktionierende Bitrate“
 
+---
+
 ## Funktion ##
 
 Ein kleines Tool zur Berechnung der Videobitrate.
@@ -16,9 +18,43 @@ Ein kleines Tool zur Berechnung der Videobitrate.
 - Berücksichtigung von Audio-Bitrate und Container-Overhead.
 - Verschiedene Presets für gängige Medien.
 
+---
+
 ## Screenshot ##
 
 ![](Screenshot.png)
+
+---
+
+## Installation/Ausführen ##
+
+### Alle OS ###
+
+Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem installiert wurde kann die Datei "qapbit.py" ausgeführt werden:
+
+```
+python qapbit.py
+```
+
+### Windows ###
+
+In Windows kann das Programm zu einer EXE-Datei kompiliert werden.
+
+1. Pyinstaller via PIP installieren:
+
+```
+pip install pyinstaller
+```
+
+2. Mit Pyinstaller kompilieren:
+
+```
+pyinstaller --onefile --windowed qapbit.py
+```
+
+Anschließend ist dei EXE-Datei im Unterordner ``\dist`` auffindbar.
+
+---
 
 ## Lizenzen ##
 
@@ -35,3 +71,8 @@ Folgende externe Quellen wurden genutzt:
 #### Grafiken ####
 
 - https://openmoji.org/
+
+#### Fonts ####
+
+- [Liberation Fonts](https://github.com/liberationfonts/liberation-fonts)
+- [Fira Code](https://github.com/tonsky/FiraCode)
