@@ -64,7 +64,7 @@ pip install pyinstaller
 pyinstaller --onefile --windowed qapbit.py
 ```
 
-Anschließend ist dei EXE-Datei im Unterordner ``\dist`` auffindbar. Diese Datei kann einfach per Doppelklick ausgeführt werden. (Die Grafiken sollten im selben Ordner liegen.)
+Anschließend ist die EXE-Datei im Unterordner ``\dist`` auffindbar. Diese Datei kann einfach per Doppelklick ausgeführt werden. (Die Grafiken sollten im selben Ordner liegen.)
 
 ---
 
