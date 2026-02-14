@@ -10,6 +10,16 @@ Videobitratenrechner
 
 ---
 
+## Übersicht ##
+
+- [Funktion](#funktion)
+- [Screenshot](#screenshot)
+- [Installation/Ausführen](#installationausführen)
+- [Kom­pi­la­ti­on](#kom­pi­la­ti­on)
+- [Lizenzen](#lizenzen)
+
+---
+
 ## Funktion ##
 
 Ein kleines Tool zur Berechnung der Videobitrate.
