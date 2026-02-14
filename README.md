@@ -15,7 +15,7 @@ Videobitratenrechner
 - [Funktion](#funktion)
 - [Screenshot](#screenshot)
 - [Installation/Ausführen](#installationausführen)
-- [Kompilation](#kompilation)
+- [Kompilieren](#kompilieren)
 - [Lizenzen](#lizenzen)
 
 ---
@@ -54,7 +54,7 @@ python --version
 
 ---
 
-## Kom­pi­la­ti­on ##
+## Kompilieren ##
 
 Durch Kompilieren des Programs, ist es auch ohne Python-Umgebung auf dem jeweiligen Betriebssystem lauffähig.
 
