@@ -74,9 +74,9 @@ Folgende Lizenzen sind zu beachten:
 
 ### Eigener Code ###
 
-<img src="gpl-v3-logo.png" alt="GPL-Logo" width="100">
+<img src="gpl-v3-logo.png" alt="GPL-Logo" width="128">
 
-GNU GENERAL PUBLIC LICENSE Version 3
+- [GNU GENERAL PUBLIC LICENSE Version 3](LICENSE)
 
 ### Externe Quellen ###
 
