@@ -30,7 +30,7 @@ Ein kleines Tool zur Berechnung der Videobitrate.
 
 ### Alle OS ###
 
-Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem installiert wurde kann die Datei "qapbit.py" ausgeführt werden:
+Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem installiert wurde kann die Datei ``qapbit.py`` ausgeführt werden:
 
 ```
 python qapbit.py
