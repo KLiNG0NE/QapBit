@@ -36,6 +36,12 @@ Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem inst
 python qapbit.py
 ```
 
+---
+
+## Kom­pi­la­ti­on ##
+
+Durch Kompilieren des Programs, ist es auch ohne Python-Umgebung auf dem jeweiligen Betriebssystem lauffähig.
+
 ### Windows ###
 
 In Windows kann das Programm zu einer EXE-Datei kompiliert werden.
