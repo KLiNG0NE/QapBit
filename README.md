@@ -15,7 +15,7 @@ Videobitratenrechner
 - [Funktion](#funktion)
 - [Screenshot](#screenshot)
 - [Installation/Ausführen](#installationausführen)
-- [Kom­pi­la­ti­on](#kom­pi­la­ti­on)
+- [Kompilation](#kompilation)
 - [Lizenzen](#lizenzen)
 
 ---
