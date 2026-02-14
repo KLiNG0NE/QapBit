@@ -36,6 +36,12 @@ Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem inst
 python qapbit.py
 ```
 
+Das Program wurde unter Windows 11 mit Python 3.12.10 getestet. Die Python-Version kann mit folgendem Befehl ermittelt werden:
+
+```
+python --version
+```
+
 ---
 
 ## Kom­pi­la­ti­on ##
