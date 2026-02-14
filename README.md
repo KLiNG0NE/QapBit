@@ -74,6 +74,8 @@ Folgende Lizenzen sind zu beachten:
 
 ### Eigener Code ###
 
+<img src="gpl-v3-logo.png" alt="GPL-Logo" width="100">
+
 GNU GENERAL PUBLIC LICENSE Version 3
 
 ### Externe Quellen ###
