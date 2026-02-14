@@ -40,13 +40,13 @@ python qapbit.py
 
 In Windows kann das Programm zu einer EXE-Datei kompiliert werden.
 
-1. Pyinstaller via PIP installieren:
+1. Pyinstaller via *PIP* installieren:
 
 ```
 pip install pyinstaller
 ```
 
-2. Mit Pyinstaller kompilieren:
+2. Mit *Pyinstaller* kompilieren:
 
 ```
 pyinstaller --onefile --windowed qapbit.py
