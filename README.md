@@ -100,3 +100,7 @@ Folgende externe Quellen wurden genutzt:
 
 - [Liberation Fonts](https://github.com/liberationfonts/liberation-fonts)
 - [Fira Code](https://github.com/tonsky/FiraCode)
+
+---
+
+[KLiNG0NE](https://github.com/KLiNG0NE/) – [QapBit](https://github.com/KLiNG0NE/QapBit/)
