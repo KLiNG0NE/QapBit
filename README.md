@@ -1,5 +1,7 @@
 # QapBit #
 
+![GitHub Created At](https://img.shields.io/github/created-at/KLiNG0NE/QapBit) ![GitHub last commit](https://img.shields.io/github/last-commit/KLiNG0NE/QapBit)
+
 Videobitratenrechner
 
 ![](film-frames.png)
