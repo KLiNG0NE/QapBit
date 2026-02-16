@@ -40,6 +40,10 @@ Ein kleines Tool zur Berechnung der Videobitrate.
 
 ## Installation/Ausführen ##
 
+### Windows ###
+
+Windows-Nutzer können eine Zip-Datei auf der [Releases-Seite](https://github.com/KLiNG0NE/QapBit/releases) herunterladen. Die Datei einfach in einen Ordner entpacken, und zum Starten ``qapbit.exe`` ausführen. Eine Installation ist nicht nötig. Zum Deinstallieren reicht es, den Ordner zu löschen.
+
 ### Alle OS ###
 
 Nachdem [Python](https://www.python.org/) für das jeweilige Betriebssystem installiert wurde kann die Datei ``qapbit.py`` ausgeführt werden:
